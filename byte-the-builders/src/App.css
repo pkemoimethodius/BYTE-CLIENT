@@ -1,0 +1,357 @@
+/* Shared Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1b1b;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  background: #343333;
+  color: rgb(219, 141, 39);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+
+nav {
+  margin: 10px 0;
+}
+
+nav a {
+  color: rgb(50, 182, 206);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  margin-top: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 22px); /* Full width minus padding */
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #146828;
+  color: rgb(247, 244, 239);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1dca43;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  background-color: #1d1e1c;
+}
+
+li button:hover {
+  background-color: #23b121;
+}
+
+/* Additional Styles from Kent Branch */
+
+/* Footer */
+.footer {
+  background-color: #3a3636;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer .social-icons a {
+  margin: 0 1rem;
+  color: white;
+  font-size: 1.7rem;
+}
+
+.footer .social-icons a:hover {
+  color: #29f700;
+}
+
+/* Home */
+.home-page {
+  padding: 2rem;
+}
+
+.separator {
+  margin: 2rem 0;
+  border: 1px solid #ddd;
+}
+
+.portfolio-section h2 {
+  text-align: center;
+}
+
+/* Login */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f2f2f2;
+  border: 2px solid #FFA500;
+  border-radius: 8px;
+}
+
+.login-form h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-btn {
+  width: 100%;
+  background-color: #fffdf8;
+  color: rgb(208, 133, 13);
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #00e5ff;
+  color: rgb(0, 0, 0);
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo a {
+  color: #FFA500;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-links li {
+  margin: 0 1rem;
+}
+
+.navbar-links a {
+  color: #d99426;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  color: #b9921c;
+}
+
+/* Project Details */
+.project-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+
+.project-details {
+  text-align: left;
+  margin: 2rem;
+}
+
+.project-image-large {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Project Slider */
+.project-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  height: 600px;
+}
+
+.project-slider {
+  display: flex;
+  animation: slide 50s linear infinite;
+}
+
+.project-card {
+  min-width: 300px;
+  margin-right: 20px;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.details-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.details-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Sliding Animation */
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Register */
+.register-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #878080;
+  border: 2px solid #a6ff00;
+  border-radius: 8px;
+}
+
+.register-form h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.register-btn {
+  width: 100%;
+  background-color: #FFA500;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background-color: #FFD700;
+}
+
+/* Search Bar */
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.search-bar-container input {
+  padding: 0.5rem;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-bar-container button {
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  background-color: #FFA500;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
