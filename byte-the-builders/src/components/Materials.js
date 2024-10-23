@@ -16,7 +16,7 @@ function Materials() {
   // Fetch materials from the backend
   const fetchMaterials = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:5000/materials'); // Adjust the API endpoint as necessary
+      const response = await fetch('https://byte-server-pwaq.onrender.com/materials'); // Adjust the API endpoint as necessary
       const data = await response.json();
       setMaterials(data);
     } catch (error) {
@@ -37,7 +37,7 @@ function Materials() {
   // Add a new material
   async function addMaterial() {
     try {
-      const response = await fetch('http://127.0.0.1:5000/materials', {
+      const response = await fetch('https://byte-server-pwaq.onrender.com/materials', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ function Materials() {
   // Delete a material
   async function deleteMaterial(id) {
     try {
-      await fetch(`http://127.0.0.1:5000/materials/${id}`, {
+      await fetch(`https://byte-server-pwaq.onrender.com/materials/${id}`, {
         method: 'DELETE',
       });
       setMaterials(materials.filter(material => material.id !== id));
@@ -75,7 +75,7 @@ function Materials() {
   // Handle the update process
   async function handleUpdate() {
     try {
-      await fetch(`http://127.0.0.1:5000/materials/${currentMaterialId}`, {
+      await fetch(`https://byte-server-pwaq.onrender.com/materials/${currentMaterialId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

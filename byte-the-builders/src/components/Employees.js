@@ -198,7 +198,7 @@ function Employees() {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5000/employees');
+        const response = await fetch('https://byte-server-pwaq.onrender.com/employees');
         const data = await response.json();
         setEmployees(data);
       } catch (error) {
@@ -217,7 +217,7 @@ function Employees() {
 
   // Add a new employee
   function addEmployee() {
-    fetch('http://127.0.0.1:5000/employees', {
+    fetch('https://byte-server-pwaq.onrender.com/employees', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -243,7 +243,7 @@ function Employees() {
 
   // Handle the update process using PATCH method
   function handleUpdate() {
-    fetch(`http://127.0.0.1:5000/employees/${currentEmployeeId}`, {
+    fetch(`https://byte-server-pwaq.onrender.com/employees/${currentEmployeeId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

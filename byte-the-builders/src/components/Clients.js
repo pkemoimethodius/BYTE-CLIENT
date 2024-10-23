@@ -15,7 +15,7 @@ function Clients() {
 
   // Fetch clients from the backend
   const fetchClients = () => {
-    fetch('http://127.0.0.1:5000/clients')
+    fetch('https://byte-server-pwaq.onrender.com/clients')
       .then(response => response.json())
       .then(data => {
         setClients(data);
@@ -34,7 +34,7 @@ function Clients() {
   };
 
   const addClient = () => {
-    fetch('http://127.0.0.1:5000/clients', {
+    fetch('https://byte-server-pwaq.onrender.com/clients', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -53,8 +53,8 @@ function Clients() {
   const updateClient = () => {
     console.log('Current Client ID:', currentClientId);
     console.log('Client Data:', clientData);
-    
-    fetch(`http://127.0.0.1:5000/clients/${currentClientId}`, {
+
+    fetch(`https://byte-server-pwaq.onrender.com/clients/${currentClientId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -69,14 +69,14 @@ function Clients() {
       })
       .then(updatedClient => {
         console.log('Updated client:', updatedClient);
-        
+
         // Update the clients state properly
         setClients(prevClients =>
           prevClients.map(client =>
             client.id === currentClientId ? updatedClient : client
           )
         );
-        
+
         resetForm();
         fetchClients();  // Refetch after updating
       })
@@ -125,7 +125,7 @@ function Clients() {
         value={clientData.phone_number}
         onChange={handleChange}
       />
-      
+
       {isUpdating ? (
         <button onClick={updateClient}>Update Client</button>
       ) : (

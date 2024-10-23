@@ -21,7 +21,7 @@ function Equipment() {
   useEffect(() => {
     const fetchEquipment = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5000/equipments');
+        const response = await fetch('https://byte-server-pwaq.onrender.com/equipments');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -44,7 +44,7 @@ function Equipment() {
   // Add new equipment
   async function addEquipment() {
     try {
-      const response = await fetch('http://127.0.0.1:5000/equipments', {
+      const response = await fetch('https://byte-server-pwaq.onrender.com/equipments', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ function Equipment() {
   // Delete equipment
   async function deleteEquipment(id) {
     try {
-      await fetch(`http://127.0.0.1:5000/equipments/${id}`, {
+      await fetch(`https://byte-server-pwaq.onrender.com/equipments/${id}`, {
         method: 'DELETE',
       });
       setEquipment(equipment.filter(item => item.id !== id));
@@ -82,7 +82,7 @@ function Equipment() {
   // Handle update process
   async function handleUpdate() {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/equipments/${currentEquipmentId}`, {
+      const response = await fetch(`https://byte-server-pwaq.onrender.com/equipments/${currentEquipmentId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
